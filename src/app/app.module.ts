@@ -7,6 +7,8 @@ import { PostsAddComponent } from './posts/components/posts-add/posts-add.compon
 import { PostsUpdateComponent } from './posts/components/posts-update/posts-update.component';
 import { PostsDetailsComponent } from './posts/components/posts-details/posts-details.component';
 import { PostsListsComponent } from './posts/components/posts-lists/posts-lists.component';
+import { LoginComponent } from './authentication/components/login/login.component';
+import { NewUserComponent } from './authentication/components/new-user/new-user.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PostsListsComponent } from './posts/components/posts-lists/posts-lists.
     PostsAddComponent,
     PostsUpdateComponent,
     PostsDetailsComponent,
-    PostsListsComponent
+    PostsListsComponent,
+    LoginComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,
