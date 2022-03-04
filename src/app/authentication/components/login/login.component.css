@@ -1,0 +1,20 @@
+.mat-card{
+    width: 500px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+#login-container{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+/*
+.mat-raised-button{
+    width: 100px;
+    margin-right: 0;
+    margin-left: auto;
+}*/
+.mat-card-title{
+    text-align: center;
+}

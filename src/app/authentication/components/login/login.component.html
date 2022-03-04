@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div id="login-container">
+    <mat-card [formGroup]="form">
+        <mat-card-title>Login</mat-card-title>
+
+        <mat-form-field appearance="legacy">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Digite o email" formControlName="email">
+            <mat-error *ngIf="!form.get('email')!.valid">Digite um email válido</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="legacy">
+            <mat-label>Senha</mat-label>
+            <input matInput type="password" placeholder="Digite sua senha" formControlName="password">
+            <mat-error *ngIf="!form.get('password')!.valid">Digite um email válido</mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary" [disabled]="!this.form.valid" (click)="login()">Entrar</button>
+    </mat-card>
+</div>

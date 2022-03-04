@@ -7,6 +7,7 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { Interceptor } from './interceptor';
 import { MenuComponent } from './menu/menu.component';
 import { PostsModule } from './posts/posts.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PostsModule } from './posts/posts.module';
     PostsModule,
     AuthenticationModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {

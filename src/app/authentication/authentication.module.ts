@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { ToastrModule } from 'ngx-toastr';
 import { LoginComponent } from './components/login/login.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
-
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { NewUserComponent } from './components/new-user/new-user.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
     //ToastrModule.forRoot()
   ],
   providers: [
