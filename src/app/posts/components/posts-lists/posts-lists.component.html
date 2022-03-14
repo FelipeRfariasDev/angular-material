@@ -1,1 +1,21 @@
-<p>posts-lists works!</p>
+<mat-card>
+  <mat-card-title>
+    Posts 
+    <a mat-button [routerLink]="['/add-post']">
+      <mat-icon>add_circle</mat-icon>
+    </a>
+  </mat-card-title>
+  
+  <div class="example-container">
+    <form [formGroup]="form">
+      <mat-form-field>
+        <mat-label>Buscar</mat-label>
+        <input matInput placeholder="O que você deseja buscar?" formControlName="buscar">
+    
+        <button mat-raised-button color="primary" (click)="getPaginate()"><mat-icon>search</mat-icon></button>
+      </mat-form-field>
+    </form>
+  </div>
+
+</mat-card>
+

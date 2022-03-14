@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from '../material.module';
 //import { BsModalService } from 'ngx-bootstrap/modal';
 //import { ToastrModule } from 'ngx-toastr';
 import { PostsAddComponent } from './components/posts-add/posts-add.component';
@@ -26,7 +27,8 @@ import { PostsService } from './service/posts.service';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
     //ToastrModule.forRoot()
   ],
   //providers: [PostsService, BsModalService]
