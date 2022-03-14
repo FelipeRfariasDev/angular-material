@@ -13,6 +13,7 @@
             <input matInput type="password" placeholder="Digite sua senha" formControlName="password">
             <mat-error *ngIf="!form.get('password')!.valid">Digite um email válido</mat-error>
         </mat-form-field>
+        <mat-error *ngIf="msg_error_login">{{msg_error_login}}</mat-error>
         <button mat-raised-button color="primary" [disabled]="!this.form.valid" (click)="login()">Entrar</button>
     </mat-card>
 </div>
