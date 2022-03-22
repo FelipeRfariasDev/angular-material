@@ -1,4 +1,4 @@
-<mat-card>
+<div class="container">
   <mat-card-title>
     Posts 
     <a mat-button [routerLink]="['/add-post']">
@@ -12,12 +12,12 @@
         <mat-label>Buscar</mat-label>
         <input matInput placeholder="O que você deseja buscar?" formControlName="buscar">
     
-        <button mat-raised-button color="primary" (click)="getPaginate()"><mat-icon>search</mat-icon></button>
       </mat-form-field>
+      <button mat-raised-button color="primary" (click)="getPaginate()"><mat-icon>search</mat-icon></button>
     </form>
   </div>
 
-</mat-card>
+
 
 <table mat-table [dataSource]="posts" class="mat-elevation-z8">
 
@@ -49,8 +49,8 @@
         
         <div class="example-button-row">
           <button mat-button color="warn">Excluir</button>
-          <button mat-button color="primary">Detalhes</button>
-          <button mat-button>Detalhes</button>
+          <button mat-button color="primary">Alterar</button>
+          <button mat-button (click)="goToDetails(post)">Detalhes</button>
         </div>
       </section>
     </td>
@@ -66,3 +66,4 @@
     <li class="page-item {{link.active==true?'active':''}}" *ngFor="let link of links"><button class="page-link" [disabled]="link.active" (click)="getPaginate(link.url)">{{link.label}}</button></li>
   </ul>
 
+</div>

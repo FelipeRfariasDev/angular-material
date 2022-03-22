@@ -75,4 +75,9 @@ export class PostsListsComponent implements OnInit {
     });
   }
 
+  goToDetails(post: Post) {
+    this.postsService.setPost(post);
+    this.router.navigate(['/detail-posts']);
+  }
+
 }
