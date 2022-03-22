@@ -17,3 +17,28 @@
   .example-container .mat-radio-button {
     margin: 0 12px;
   }
+
+  table {
+    width: 100%;
+  }
+
+ .pagination{
+    list-style-type: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
