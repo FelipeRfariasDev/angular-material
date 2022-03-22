@@ -48,8 +48,8 @@
       <section>
         
         <div class="example-button-row">
-          <button mat-button color="warn">Excluir</button>
-          <button mat-button color="primary">Alterar</button>
+          <button mat-button color="warn" (click)="delete(post)">Excluir</button>
+          <button mat-button color="primary" (click)="goToEdit(post)">Alterar</button>
           <button mat-button (click)="goToDetails(post)">Detalhes</button>
         </div>
       </section>

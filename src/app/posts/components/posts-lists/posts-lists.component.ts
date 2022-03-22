@@ -69,7 +69,6 @@ export class PostsListsComponent implements OnInit {
     }, error => {
       if(error.error.success==false || error.error.status==403){
         localStorage.setItem('accessToken','');
-        //this.toastr.error(error.error.message,"Erro");
         this.router.navigate(['/']);
       }
     });
@@ -80,4 +79,17 @@ export class PostsListsComponent implements OnInit {
     this.router.navigate(['/detail-posts']);
   }
 
+  goToEdit(post: Post) {
+    this.postsService.setPost(post);
+    this.router.navigate(['/update-post']);
+  }
+
+  delete(post: Post) {
+    this.postsService.delete(post!).subscribe((response:any)=>{
+      if(response.success){
+        this.getPaginate(this.link_page_atual);
+        return;
+      }
+    });
+  }
 }
