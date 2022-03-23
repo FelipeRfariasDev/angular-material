@@ -5,7 +5,8 @@ import { PostsService } from '../../service/posts.service';
 
 @Component({
   selector: 'app-posts-add',
-  templateUrl: './posts-add.component.html'
+  templateUrl: './posts-add.component.html',
+  styleUrls: ['./posts-add.component.css']
 })
 export class PostsAddComponent implements OnInit {
 
@@ -15,7 +16,7 @@ export class PostsAddComponent implements OnInit {
     titulo: new FormControl('', Validators.required),
     descricao: new FormControl('', Validators.required)
   });
-
+  
   constructor(private postservice: PostsService, private router: Router) { }
 
   ngOnInit(): void {
@@ -41,5 +42,4 @@ export class PostsAddComponent implements OnInit {
       this.selectedFile = element.files[0];
     }
   }
-
 }

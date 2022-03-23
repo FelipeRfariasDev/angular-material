@@ -1,21 +1,24 @@
-<h1>Adicionar Post <span class="btn btn-success" [routerLink]="['/list-posts']">Voltar</span></h1>
+<div class="container">
+    <mat-card-title>
+      Posts Adicionar <a mat-button [routerLink]="['/list-posts']"><mat-icon>arrow_back</mat-icon></a>
+    </mat-card-title>
+    
+    <form [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Título</mat-label>
+            <input matInput placeholder="Título" formControlName="titulo">
+            <mat-error *ngIf="!this.form.get('titulo')?.valid">campo obrigatório</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Descrição</mat-label>
+            <textarea matInput placeholder="Descrição" formControlName="descricao"></textarea>
+            <mat-error *ngIf="!this.form.get('descricao')?.valid">campo obrigatório</mat-error>
+        </mat-form-field>
 
-<form [formGroup]="form">
-    <div class="mb-3">
-        <label class="form-label">Titulo</label>
-        <input type="text" class="form-control" formControlName="titulo">
-        <span *ngIf="!this.form.get('titulo')?.valid" class="badge bg-danger">campo obrigatório</span>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Descrição</label>
-        <textarea class="form-control" rows="3" formControlName="descricao"></textarea>
-        <span *ngIf="!this.form.get('descricao')?.valid" class="badge bg-danger">campo obrigatório</span>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Imagem</label>
-        <input type="file" class="form-control" (change)="inputFileChange($event)">
-    </div>
-    <div class="mb-3">
-        <button type="submit" [disabled]="!this.form.valid" class="btn btn-primary mb-3" (click)="add()">Salvar</button>
-    </div>
-</form>
+        <mat-label>Imagem</mat-label>
+        <input type="file" (change)="inputFileChange($event)">
+        <button mat-raised-button color="primary" [disabled]="!this.form.valid" (click)="add()">Salvar</button>
+    </form>
+
+</div>

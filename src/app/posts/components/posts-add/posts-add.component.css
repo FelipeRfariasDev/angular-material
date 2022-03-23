@@ -1,0 +1,12 @@
+.container{
+    padding: 25px;
+  }
+
+form{
+    width: 500px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
